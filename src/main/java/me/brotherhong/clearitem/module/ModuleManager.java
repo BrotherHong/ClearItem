@@ -23,13 +23,14 @@ public class ModuleManager {
             module.onEnable();
         }
 
-        plugin.getServer().getLogger().info("Loaded " + modules.size() + " plugin modules.");
+        plugin.getServer().getLogger().info("[ClearItem] Loaded " + modules.size() + " plugin modules.");
     }
 
     public void unloadModules() {
         for (Module module : modules) {
             module.onDisable();
         }
+        modules.clear();
     }
 
     private void addModule(Module module) {

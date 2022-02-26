@@ -34,6 +34,8 @@ public class ReloadCommand extends SubCommand {
     @Override
     public void execute(Player player, String[] args) {
         config.reload();
+        plugin.getModuleManager().unloadModules();
+        plugin.getModuleManager().loadModules();
         messages.send(player, "&aReload complete.");
     }
 }

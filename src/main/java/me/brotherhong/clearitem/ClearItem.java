@@ -60,4 +60,8 @@ public final class ClearItem extends JavaPlugin {
     public Messages getMessages() {
         return messages;
     }
+
+    public ModuleManager getModuleManager() {
+        return moduleManager;
+    }
 }
