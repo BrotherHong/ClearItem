@@ -31,6 +31,7 @@ public class Config extends ConfigManager {
             entitiesToClear = getConfig()
                     .getStringList("entities-to-clear")
                     .stream()
+                    .map(String::toUpperCase)
                     .map(EntityType::valueOf)
                     .collect(Collectors.toList());
         } catch (IllegalArgumentException e) {
@@ -66,6 +67,9 @@ public class Config extends ConfigManager {
     }
 
     public List<EntityType> getEntitiesToClear() {
+        if (entitiesToClear == null) {
+            entitiesToClear = new ArrayList<>();
+        }
         return entitiesToClear;
     }
 }
