@@ -1,0 +1,11 @@
+prefix: '&7[&9Clear&eItem&7]'
+
+general:
+  # seconds
+  clear-interval: 600
+  broadcast: [1,2,3,10,30,60]
+
+messages:
+  no-permission: '&cYou do not have permission to do this!'
+  countdown: '&cGround item will be removed in &7%remaining% &cseconds'
+  clear: '&aTotal %amount% items have been removed!'

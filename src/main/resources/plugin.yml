@@ -1,0 +1,13 @@
+name: ClearItem
+version: '${project.version}'
+main: me.brotherhong.clearitem.ClearItem
+api-version: 1.17
+authors: [ BrotherHong ]
+
+commands:
+  clearitem:
+    aliases: [ci]
+
+permissions:
+  clearitem.op:
+    default: op
