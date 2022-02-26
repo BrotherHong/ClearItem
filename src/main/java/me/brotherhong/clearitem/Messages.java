@@ -32,7 +32,7 @@ public class Messages {
 
     public void broadcastRemaining(int remaining) {
         plugin.getServer().broadcastMessage(prefix + trans(
-                config.getString(path + "remaining")
+                config.getString(path + "countdown")
                         .replaceAll("%remaining%", Integer.toString(remaining)))
         );
     }
