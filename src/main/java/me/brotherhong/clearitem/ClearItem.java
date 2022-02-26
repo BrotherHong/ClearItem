@@ -39,18 +39,27 @@ public final class ClearItem extends JavaPlugin {
 
     public void clearDroppedItem() {
         List<World> worlds = getServer().getWorlds();
+        List<String> whiteListedWorld = config.getWhiteListedWorld();
         int count = 0;
 
         for (World world : worlds) {
+            if (whiteListedWorld.contains(world.getName()))
+                continue;
             List<Entity> entities = world.getEntities();
             for (Entity entity : entities) {
-                if (entity.getType() == EntityType.DROPPED_ITEM) {
+                if (!config.canClearNameTag() && entity.getCustomName() != null)
+                    continue;
+                if (canClear(entity.getType())) {
                     entity.remove();
                     count++;
                 }
             }
         }
         messages.broadcastClear(count);
+    }
+
+    private boolean canClear(EntityType type) {
+        return config.getEntitiesToClear().contains(type);
     }
 
     public Config getMyConfig() {

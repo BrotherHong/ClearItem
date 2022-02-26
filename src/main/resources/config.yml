@@ -4,8 +4,57 @@ general:
   # seconds
   clear-interval: 600
   broadcast: [1,2,3,10,30,60]
+  # Whether clear the entity having name tag or not
+  clear-nametag: false
+
+# The world that won't clear entity
+white-list:
+  - world
 
 messages:
   no-permission: '&cYou do not have permission to do this!'
   countdown: '&cGround item will be removed in &7%remaining% &cseconds'
-  clear: '&aTotal %amount% items have been removed!'
+  clear: '&aTotal %amount% entities have been removed!'
+
+entities-to-clear:
+  - ARROW
+  - BLAZE
+  - CAVE_SPIDER
+  - CREEPER
+  - DROPPED_ITEM
+  - DROWNED
+  - EGG
+  - ELDER_GUARDIAN
+  - ENDERMAN
+  - ENDERMITE
+  - EVOKER
+  - EVOKER_FANGS
+  - GHAST
+  - GUARDIAN
+  - HOGLIN
+  - HUSK
+  - ILLUSIONER
+  - MAGMA_CUBE
+  - PHANTOM
+  - PIGLIN
+  - PIGLIN_BRUTE
+  - PILLAGER
+  - PRIMED_TNT
+  - RAVAGER
+  - SHULKER
+  - SHULKER_BULLET
+  - SILVERFISH
+  - SKELETON
+  - SLIME
+  - SPIDER
+  - SPLASH_POTION
+  - STRAY
+  - TRIDENT
+  - VEX
+  - VINDICATOR
+  - WITCH
+  - WITHER_SKELETON
+  - ZOGLIN
+  - ZOMBIE
+  - ZOMBIE_VILLAGER
+  - ZMOBIFIED_PIGLIN

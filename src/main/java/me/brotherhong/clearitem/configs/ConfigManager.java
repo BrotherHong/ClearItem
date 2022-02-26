@@ -12,7 +12,7 @@ import java.util.logging.Level;
 
 public abstract class ConfigManager {
 
-    private final ClearItem plugin;
+    protected final ClearItem plugin;
 
     private FileConfiguration dataConfig = null;
     private File configFile = null;
