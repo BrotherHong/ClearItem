@@ -2,6 +2,8 @@ package me.brotherhong.clearitem.commands;
 
 import me.brotherhong.clearitem.ClearItem;
 import me.brotherhong.clearitem.Messages;
+import me.brotherhong.clearitem.commands.subcommands.ClearCommand;
+import me.brotherhong.clearitem.commands.subcommands.ReloadCommand;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.command.TabExecutor;
@@ -19,6 +21,9 @@ public class CommandManager implements TabExecutor {
     public CommandManager(ClearItem plugin) {
         this.plugin = plugin;
         this.messages = plugin.getMessages();
+
+        subCommands.add(new ReloadCommand(plugin));
+        subCommands.add(new ClearCommand(plugin));
     }
 
     @Override
